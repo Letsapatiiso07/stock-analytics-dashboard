@@ -82,7 +82,7 @@ Without `--end` the pipeline downloads up to the last finished trading day and t
 - Yahoo Finance daily bars through the unofficial yfinance library (1.7.0), with `auto_adjust=True`.
 - Range behind the results: 4 Jan 2016 to 30 Sep 2026, downloaded on 23 Oct 2026.
 - Freshness: end-of-day data only. The app shows the date of the last bar and when it was fetched. Nothing streams, so it is not real-time.
-- Yahoo rescales adjusted history when a stock pays a dividend, so a later download of the same range can give slightly different numbers.
+- Yahoo rescales adjusted history when a stock pays a dividend, so a later download of the same range can give slightly different numbers. Even two downloads a few minutes apart on 23 Oct 2026 differed by up to $0.0002 a share. In a fresh clone that moved two random forest figures (GOOGL hit rate 52.20% to 52.33%, MSFT MAE / naive 1.018 to 1.017); the ridge and baseline figures did not change. On the same data, every run gives the same numbers.
 - Yahoo's data is for personal use. Check its terms before using it for anything else.
 - Downloaded data and the database stay out of git (`data/` is ignored).
 
